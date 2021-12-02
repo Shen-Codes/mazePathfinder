@@ -66,7 +66,8 @@
         const idx = path.findIndex((pathTile) => pathTile.xIdx === junction.x && pathTile.yIdx === junction.y);
         const deadPath = path.splice(idx + 1);
         deadPath.forEach((deadTile, idx) => {
-          ctx.clearRect(deadTile.xIdx * 10, deadTile.yIdx * 10, 10, 10);
+          ctx.fillStyle = "#CBCDCE";
+          ctx.fillRect(deadTile.xIdx * 10, deadTile.yIdx * 10, 10, 10);
         });
       };
 
@@ -138,7 +139,7 @@
           }
         };
 
-        interval = setInterval(moveTheGuy, 50);
+        interval = setInterval(moveTheGuy, 1);
       };
     </script>
   </body>
